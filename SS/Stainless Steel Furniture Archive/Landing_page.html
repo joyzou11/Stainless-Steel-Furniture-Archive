@@ -50,10 +50,19 @@
 
         /* Main Content */
         .content {
+            align-items: center;
             text-align: center;
-            position: relative;
+            position: absolute;
         
         }
+        .content :hover {
+            transform: scale(1.1); /* Slightly enlarge the text on hover */
+        }
+
+        .content :active {  
+            transform: scale(0.95); /* Slightly shrink the text when clicked */
+        }
+
 
         .content img {
             max-width: 50%;
@@ -80,6 +89,16 @@
         max-width: 70%; 
         height: auto;
         }
+
+        
+   
+
+       
+</style>
+
+        
+
+       
     </style>
 </head>
 <body>
@@ -95,7 +114,7 @@
    
     <div class="content">
         <img src="Imgs/Landing_bg.png">
-        <h1><a href="Index.html">(CHAIRS)</a></h1>
+        <h1><a href="Index.html">(FURNITURE)</a></h1>
     </div>
 </body>
 </html>
