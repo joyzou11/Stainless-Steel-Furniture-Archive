@@ -1,0 +1,822 @@
+
+if (typeof (window) !== 'undefined' && window.performance && window.performance.mark) {
+  window.performance.mark('yotpo:loader:loaded');
+}
+var yotpoWidgetsContainer = yotpoWidgetsContainer || { guids: {} };
+(function(){
+    var guid = "s7lE1cN3Ig5wi15G7f7Ozw";
+    var loader = {
+        loadDep: function (link, onLoad, strategy) {
+            var script = document.createElement('script');
+            script.onload = onLoad || function(){};
+            script.src = link;
+            if (strategy === 'defer') {
+                script.defer = true;
+            } else if (strategy === 'async') {
+                script.async = true;
+            }
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("charset", "utf-8");
+            document.head.appendChild(script);
+        },
+        config: {
+            data: {
+                guid: guid
+            },
+            widgets: {
+            
+                "696047": {
+                    instanceId: "696047",
+                    instanceVersionId: "237854554",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-customer-preview/app.v0.2.6-6145.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "view-background-color": "transparent",
+                      "view-primary-color": "#2e4f7c",
+                      "view-primary-font": "Nunito Sans@700|https://cdn-widgetsrepository.yotpo.com/web-fonts/css/nunito_sans/v1/nunito_sans_700.css",
+                      "view-text-color": "#202020",
+                      "welcome-text": "Good morning"
+                    },
+                    staticContent: {
+                      "currency": "USD",
+                      "hideIfMatchingQueryParam": [
+                        "oseid"
+                      ],
+                      "isHidden": true,
+                      "platformName": "shopify",
+                      "selfExecutable": true,
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy",
+                      "storeLoginUrl": "https://www.foromshop.com//account/login",
+                      "storeRegistrationUrl": "https://www.foromshop.com//account/register",
+                      "storeRewardsPageUrl": "https://www.foromshop.com//pages/rewards",
+                      "urlMatch": "^(?!.*\\.yotpo\\.com).*$"
+                    },
+                    className: "CustomerPreview",
+                    dependencyGroupId: null
+                },
+            
+                "128551": {
+                    instanceId: "128551",
+                    instanceVersionId: "39468032",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-referral-widget/app.v1.8.1-4652.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "background-color": "rgba(233,232,224,1)",
+                      "background-image-url": "https://cdn-widget-assets.yotpo.com/static_assets/s7lE1cN3Ig5wi15G7f7Ozw/images/image_2022_03_09_22_30_08_585",
+                      "customer-email-view-button-text": "Next",
+                      "customer-email-view-description": "Give your friends $20 off their first order of $40 and get $20 (in points) for each successful referral",
+                      "customer-email-view-header": "Refer a Friend",
+                      "customer-email-view-input-placeholder": "Your email address",
+                      "customer-email-view-title": "GIVE $20, GET $20",
+                      "customer-name-view-input-placeholder": "Your name",
+                      "default-toggle": true,
+                      "description-color": "rgba(116,115,110,1)",
+                      "description-font-size": "20px",
+                      "final-view-button-text": "REFER MORE FRIENDS",
+                      "final-view-description": "Remind your friends to check their emails",
+                      "final-view-error-description": "We were unable to send the referral link",
+                      "final-view-error-text": "GO BACK",
+                      "final-view-error-title": "SOMETHING WENT WRONG",
+                      "final-view-title": "THANKS FOR REFERRING",
+                      "fonts-primary-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "fonts-secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "header-color": "rgba(116,115,110,1)",
+                      "header-font-size": "18px",
+                      "headline-color": "rgba(116,115,110,1)",
+                      "headline-font-size": 40,
+                      "main-share-option-desktop": "main_share_email",
+                      "main-share-option-mobile": "main_share_sms",
+                      "next-button-background-color": "rgba(51,44,43,1)",
+                      "next-button-font-size": "18px",
+                      "next-button-size": "standard",
+                      "next-button-text-color": "rgba(255,255,255,1)",
+                      "next-button-type": "rounded_rectangle",
+                      "referral-history-completed-points-text": "{{points}} POINTS",
+                      "referral-history-completed-status-type": "text",
+                      "referral-history-confirmed-status": "COMPLETED",
+                      "referral-history-pending-status": "PENDING",
+                      "referral-history-redeem-text": "To redeem your points, simply apply your discount at checkout.",
+                      "referral-history-sumup-line-points-text": "{{points}} POINTS",
+                      "referral-history-sumup-line-text": "Your Rewards",
+                      "referral-views-button-text": "Next",
+                      "referral-views-copy-link-button-text": "COPY LINK",
+                      "referral-views-description": "Give your friends $20 off their first order of $40 and get $20 (in points) for each successful referral",
+                      "referral-views-email-share-body": "How does a discount off your first order at {{company_name}} sound? Use the link below and once you've shopped, I'll get a reward too.\n{{referral_link}}",
+                      "referral-views-email-share-subject": "Discount to a Store You'll Love!",
+                      "referral-views-email-share-type": "marketing_email",
+                      "referral-views-friends-input-placeholder": "Friend’s email address",
+                      "referral-views-header": "Refer a Friend",
+                      "referral-views-personal-email-button-text": "SEND VIA MY EMAIL",
+                      "referral-views-sms-button-text": "SEND VIA SMS",
+                      "referral-views-title": "GIVE $20, GET $20",
+                      "referral-views-whatsapp-button-text": "SEND VIA WHATSAPP",
+                      "share-allow-copy-link": true,
+                      "share-allow-email": true,
+                      "share-allow-facebook": true,
+                      "share-allow-sms": true,
+                      "share-allow-twitter": true,
+                      "share-allow-whatsapp": true,
+                      "share-facebook-header": "Earn A Discount When You Shop Today!",
+                      "share-facebook-image-url": "",
+                      "share-icons-color": "rgba(116,115,110,1)",
+                      "share-settings-copyLink": true,
+                      "share-settings-default-checkbox": true,
+                      "share-settings-default-mobile-checkbox": true,
+                      "share-settings-email": true,
+                      "share-settings-facebook": true,
+                      "share-settings-fbMessenger": true,
+                      "share-settings-mobile-copyLink": true,
+                      "share-settings-mobile-email": true,
+                      "share-settings-mobile-facebook": true,
+                      "share-settings-mobile-fbMessenger": true,
+                      "share-settings-mobile-sms": true,
+                      "share-settings-mobile-twitter": true,
+                      "share-settings-mobile-whatsapp": true,
+                      "share-settings-twitter": true,
+                      "share-settings-whatsapp": true,
+                      "share-sms-message": "I love {{company_name}}! Shop through my link to get a reward {{referral_link}}",
+                      "share-twitter-message": "These guys are great! Get a discount using my link: ",
+                      "share-whatsapp-message": "I love {{company_name}}! Shop through my link to get a reward {{referral_link}}",
+                      "tab-size": "medium",
+                      "tab-type": "lower_line",
+                      "tab-view-primary-tab-text": "Refer a Friend",
+                      "tab-view-secondary-tab-text": "Your Referrals",
+                      "tile-color": "rgba(233,232,224,1)",
+                      "title-color": "rgba(116,115,110,1)",
+                      "title-font-size": 40,
+                      "view-exit-intent-enabled": false,
+                      "view-exit-intent-mobile-timeout-ms": 10000,
+                      "view-is-popup": "false",
+                      "view-layout": "right",
+                      "view-popup-delay-ms": 0,
+                      "view-show-popup-on-exit": false,
+                      "view-show-referral-history": false,
+                      "view-table-rectangular-dark-pending-color": "rgba( 0, 0, 0, 0.6 )",
+                      "view-table-rectangular-light-pending-color": "#FFFFFF",
+                      "view-table-selected-color": "#558342",
+                      "view-table-theme": "dark",
+                      "view-table-type": "rectangular",
+                      "wadmin-text-and-share-choose-sreen": "step_1"
+                    },
+                    staticContent: {
+                      "companyName": "Forom",
+                      "cssEditorEnabled": "true",
+                      "currency": "USD",
+                      "hasPrimaryFontsFeature": true,
+                      "isMultiCurrencyEnabled": false,
+                      "merchantId": "99393",
+                      "migrateTabColorToBackground": true,
+                      "platformName": "shopify",
+                      "referralHistoryEnabled": true,
+                      "referralHost": "http://rwrd.io"
+                    },
+                    className: "ReferralWidget",
+                    dependencyGroupId: 2
+                },
+            
+                "128550": {
+                    instanceId: "128550",
+                    instanceVersionId: "318554598",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-visual-redemption/app.v0.6.1-4815.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "description-color": "#666d8b",
+                      "description-font-size": "20",
+                      "headline-color": "#011247",
+                      "headline-font-size": "36",
+                      "layout-background-color": "white",
+                      "primary-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "redemption-1-displayname": "Tile 1",
+                      "redemption-1-settings-cost": "0 points",
+                      "redemption-1-settings-cost-color": "#666d8b",
+                      "redemption-1-settings-cost-font-size": "20",
+                      "redemption-1-settings-reward": "$0",
+                      "redemption-1-settings-reward-color": "#011247",
+                      "redemption-1-settings-reward-font-size": "30",
+                      "redemption-2-displayname": "Tile 2",
+                      "redemption-2-settings-cost": "0 points",
+                      "redemption-2-settings-cost-color": "#666d8b",
+                      "redemption-2-settings-cost-font-size": "20",
+                      "redemption-2-settings-reward": "$0",
+                      "redemption-2-settings-reward-color": "#011247",
+                      "redemption-2-settings-reward-font-size": "30",
+                      "redemption-3-displayname": "Tile 3",
+                      "redemption-3-settings-cost": "0 points",
+                      "redemption-3-settings-cost-color": "#666d8b",
+                      "redemption-3-settings-cost-font-size": "20",
+                      "redemption-3-settings-reward": "$0",
+                      "redemption-3-settings-reward-color": "#011247",
+                      "redemption-3-settings-reward-font-size": "30",
+                      "rule-border-color": "#bccdfe",
+                      "rule-color": "#061153",
+                      "rule-font-size": "18",
+                      "secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans\u0026display=swap",
+                      "selected-extensions": [
+                        "1",
+                        "2",
+                        "3"
+                      ],
+                      "view-layout": "full-layout",
+                      "visual-redemption-description": "Redeeming your hard-earned points is easy! Simply apply your points for a discount at checkout!",
+                      "visual-redemption-headline": "How to use your points",
+                      "visual-redemption-rule": "100 points equals $10.00"
+                    },
+                    staticContent: {
+                      "cssEditorEnabled": "true",
+                      "currency": "USD",
+                      "isMultiCurrencyEnabled": false,
+                      "platformName": "shopify",
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy"
+                    },
+                    className: "VisualRedemptionWidget",
+                    dependencyGroupId: 2
+                },
+            
+                "128549": {
+                    instanceId: "128549",
+                    instanceVersionId: "318554907",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-loyalty-campaigns/app.v0.13.0-4770.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "campaign-description-font-color": "#4e5772",
+                      "campaign-description-size": "18px",
+                      "campaign-item-1107598-background-color": "rgba(233,232,224,1)",
+                      "campaign-item-1107598-background-image-color-overlay": "rgba(0, 0, 0, .4)",
+                      "campaign-item-1107598-background-type": "color",
+                      "campaign-item-1107598-border-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107598-description-font-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107598-description-font-size": "18",
+                      "campaign-item-1107598-exclude_audience_ids": null,
+                      "campaign-item-1107598-exclude_audience_names": [],
+                      "campaign-item-1107598-hover-view-tile-message": "Earn 500 points when you create an account",
+                      "campaign-item-1107598-icon-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107598-icon-type": "defaultIcon",
+                      "campaign-item-1107598-include_audience_ids": "1",
+                      "campaign-item-1107598-include_audience_names": [
+                        "All customers"
+                      ],
+                      "campaign-item-1107598-special-reward-enabled": "false",
+                      "campaign-item-1107598-special-reward-headline-background-color": "#E0DBEF",
+                      "campaign-item-1107598-special-reward-headline-text": "Just for you!",
+                      "campaign-item-1107598-special-reward-headline-title-font-color": "#5344A6",
+                      "campaign-item-1107598-special-reward-headline-title-font-size": "16",
+                      "campaign-item-1107598-special-reward-tile-border-color": "#8270E7",
+                      "campaign-item-1107598-tile-description": "Create an account",
+                      "campaign-item-1107598-tile-reward": "500 Points",
+                      "campaign-item-1107598-title-font-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107598-title-font-size": "27",
+                      "campaign-item-1107598-type": "CreateAccountCampaign",
+                      "campaign-item-1107599-action-tile-action-text": "Add My Birthday",
+                      "campaign-item-1107599-action-tile-ask-year": "true",
+                      "campaign-item-1107599-action-tile-birthday-ask-year": "false",
+                      "campaign-item-1107599-action-tile-birthday-required-field-message": "This field is required",
+                      "campaign-item-1107599-action-tile-birthday-thank-you-message": "Thanks! We're looking forward to helping you celebrate :)",
+                      "campaign-item-1107599-action-tile-european-date-format": "false",
+                      "campaign-item-1107599-action-tile-message-text": "If your birthday is within the next 30 days, your reward will be granted in delay, up to 30 days.",
+                      "campaign-item-1107599-action-tile-month-names": "January,February,March,April,May,June,July,August,September,October,November,December",
+                      "campaign-item-1107599-action-tile-title": "Earn 500 points on your birthday",
+                      "campaign-item-1107599-background-color": "rgba(233,232,224,1)",
+                      "campaign-item-1107599-background-image-color-overlay": "rgba(0, 0, 0, .4)",
+                      "campaign-item-1107599-background-type": "color",
+                      "campaign-item-1107599-border-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107599-description-font-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107599-description-font-size": "18",
+                      "campaign-item-1107599-exclude_audience_ids": null,
+                      "campaign-item-1107599-exclude_audience_names": [],
+                      "campaign-item-1107599-icon-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107599-icon-type": "defaultIcon",
+                      "campaign-item-1107599-include_audience_ids": "1",
+                      "campaign-item-1107599-include_audience_names": [
+                        "All customers"
+                      ],
+                      "campaign-item-1107599-special-reward-enabled": "false",
+                      "campaign-item-1107599-special-reward-headline-background-color": "#E0DBEF",
+                      "campaign-item-1107599-special-reward-headline-text": "Just for you!",
+                      "campaign-item-1107599-special-reward-headline-title-font-color": "#5344A6",
+                      "campaign-item-1107599-special-reward-headline-title-font-size": "16",
+                      "campaign-item-1107599-special-reward-tile-border-color": "#8270E7",
+                      "campaign-item-1107599-tile-description": "Happy Birthday",
+                      "campaign-item-1107599-tile-reward": "500 Points",
+                      "campaign-item-1107599-title-font-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107599-title-font-size": "27",
+                      "campaign-item-1107599-type": "BirthdayCampaign",
+                      "campaign-item-1107600-background-color": "rgba(233,232,224,1)",
+                      "campaign-item-1107600-background-image-color-overlay": "rgba(0, 0, 0, .4)",
+                      "campaign-item-1107600-background-type": "color",
+                      "campaign-item-1107600-border-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107600-description-font-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107600-description-font-size": "18",
+                      "campaign-item-1107600-exclude_audience_ids": null,
+                      "campaign-item-1107600-exclude_audience_names": [],
+                      "campaign-item-1107600-hover-view-tile-message": "Earn 500 points for every $1.00 you spend in our store",
+                      "campaign-item-1107600-icon-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107600-icon-type": "defaultIcon",
+                      "campaign-item-1107600-include_audience_ids": "1",
+                      "campaign-item-1107600-include_audience_names": [
+                        "All customers"
+                      ],
+                      "campaign-item-1107600-special-reward-enabled": "false",
+                      "campaign-item-1107600-special-reward-headline-background-color": "#E0DBEF",
+                      "campaign-item-1107600-special-reward-headline-text": "Just for you!",
+                      "campaign-item-1107600-special-reward-headline-title-font-color": "#5344A6",
+                      "campaign-item-1107600-special-reward-headline-title-font-size": "16",
+                      "campaign-item-1107600-special-reward-tile-border-color": "#8270E7",
+                      "campaign-item-1107600-tile-description": "Make a purchase",
+                      "campaign-item-1107600-tile-reward": "10 Points Per $1.00",
+                      "campaign-item-1107600-title-font-color": "rgba(126,126,126,1)",
+                      "campaign-item-1107600-title-font-size": "27",
+                      "campaign-item-1107600-type": "PointsForPurchasesCampaign",
+                      "campaign-title-font-color": "#011247",
+                      "campaign-title-size": "27px",
+                      "completed-tile-headline": "Completed",
+                      "completed-tile-message": "You already completed this campaign",
+                      "container-headline": "Ways to earn points",
+                      "general-hover-tile-button-color": "rgba(51,44,43,1)",
+                      "general-hover-tile-button-text-color": "rgba(255,255,255,1)",
+                      "general-hover-tile-button-type": "rounded_filled_rectangle",
+                      "general-hover-tile-color-overlay": "rgba(255,255,255,1)",
+                      "general-hover-tile-text-color": "rgba(126,126,126,1)",
+                      "headline-color": "rgba(116,115,110,1)",
+                      "headline-font-color": "rgba(116,115,110,1)",
+                      "headline-font-size": 40,
+                      "logged-out-is-redirect-after-login-to-current-page": "true",
+                      "logged-out-message": "Already a member?",
+                      "logged-out-sign-in-text": "Log in",
+                      "logged-out-sign-up-text": "Sign up",
+                      "main-text-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "secondary-text-font-name-and-url": "Montserrat@400|https://fonts.googleapis.com/css?family=Montserrat\u0026display=swap",
+                      "selected-audiences": "1",
+                      "selected-extensions": [
+                        "1107598",
+                        "1107599",
+                        "1107600"
+                      ],
+                      "special-reward-enabled": "false",
+                      "special-reward-headline-background-color": "#E0DBEF",
+                      "special-reward-headline-text": "Special for you",
+                      "special-reward-headline-title-font-color": "#5344A6",
+                      "special-reward-headline-title-font-size": "16",
+                      "special-reward-tile-border-color": "#8270E7",
+                      "tile-border-color": "#848ca3",
+                      "tile-spacing-type": "small",
+                      "tiles-background-color": "#f9faff",
+                      "time-between-rewards-days": "You're eligible to participate again in *|days|* days.",
+                      "time-between-rewards-hours": "You're eligible to participate again in *|hours|* hours."
+                    },
+                    staticContent: {
+                      "companyName": "Forom",
+                      "cssEditorEnabled": "true",
+                      "currency": "USD",
+                      "facebookAppId": "1647129615540489",
+                      "isMultiCurrencyEnabled": false,
+                      "isSegmentationsPickerEnabled": false,
+                      "merchantId": "99393",
+                      "platformName": "shopify",
+                      "storeAccountLoginUrl": "//forom.co/account/login",
+                      "storeAccountRegistrationUrl": "//forom.co/account/register",
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy"
+                    },
+                    className: "CampaignWidget",
+                    dependencyGroupId: 2
+                },
+            
+                "128548": {
+                    instanceId: "128548",
+                    instanceVersionId: "318554731",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-my-rewards/app.v0.3.3-4897.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "headline-color": "rgba(116,115,110,1)",
+                      "headline-font-size": 40,
+                      "logged-in-description-color": "#728be2",
+                      "logged-in-description-font-size": "34",
+                      "logged-in-description-text": "You Have {{current_point_balance}} Points",
+                      "logged-in-headline-color": "rgba(116,115,110,1)",
+                      "logged-in-headline-font-size": 40,
+                      "logged-in-headline-text": "Hi {{first_name}}!",
+                      "logged-in-primary-button-cta-type": "redemptionWidget",
+                      "logged-in-primary-button-text": "REDEEM NOW",
+                      "logged-in-secondary-button-text": "REWARDS HISTORY",
+                      "logged-out-headline-color": "rgba(116,115,110,1)",
+                      "logged-out-headline-font-size": 40,
+                      "logged-out-headline-text": "How It Works",
+                      "logged-out-selected-step-name": "step_1",
+                      "primary-button-background-color": "#728be2",
+                      "primary-button-text-color": "#ffffff",
+                      "primary-button-type": "filled_rectangle",
+                      "primary-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "reward-step-1-displayname": "Step 1",
+                      "reward-step-1-settings-description": "Create an account and\nget 100 points.",
+                      "reward-step-1-settings-description-color": "rgba(126,126,126,1)",
+                      "reward-step-1-settings-description-font-size": "20",
+                      "reward-step-1-settings-icon": "default",
+                      "reward-step-1-settings-icon-color": "rgba(126,126,126,1)",
+                      "reward-step-1-settings-title": "SIGN UP",
+                      "reward-step-1-settings-title-color": "rgba(126,126,126,1)",
+                      "reward-step-1-settings-title-font-size": "24",
+                      "reward-step-2-displayname": "Step 2",
+                      "reward-step-2-settings-description": "Earn points every time\nyou shop.",
+                      "reward-step-2-settings-description-color": "rgba(126,126,126,1)",
+                      "reward-step-2-settings-description-font-size": "20",
+                      "reward-step-2-settings-icon": "default",
+                      "reward-step-2-settings-icon-color": "rgba(126,126,126,1)",
+                      "reward-step-2-settings-title": "EARN POINTS",
+                      "reward-step-2-settings-title-color": "rgba(126,126,126,1)",
+                      "reward-step-2-settings-title-font-size": "24",
+                      "reward-step-3-displayname": "Step 3",
+                      "reward-step-3-settings-description": "Redeem points for\nexclusive discounts.",
+                      "reward-step-3-settings-description-color": "rgba(126,126,126,1)",
+                      "reward-step-3-settings-description-font-size": "20",
+                      "reward-step-3-settings-icon": "default",
+                      "reward-step-3-settings-icon-color": "rgba(126,126,126,1)",
+                      "reward-step-3-settings-title": "REDEEM POINTS",
+                      "reward-step-3-settings-title-color": "rgba(126,126,126,1)",
+                      "reward-step-3-settings-title-font-size": "24",
+                      "rewards-history-approved-text": "Approved",
+                      "rewards-history-background-color": "rgba(1,18,71,0.8)",
+                      "rewards-history-headline-color": "#10055c",
+                      "rewards-history-headline-font-size": "28",
+                      "rewards-history-headline-text": "Rewards History",
+                      "rewards-history-pending-text": "Pending",
+                      "rewards-history-refunded-text": "Refunded",
+                      "rewards-history-reversed-text": "Reversed",
+                      "rewards-history-table-action-col-text": "Action",
+                      "rewards-history-table-date-col-text": "Date",
+                      "rewards-history-table-points-col-text": "Points",
+                      "rewards-history-table-status-col-text": "Status",
+                      "rewards-history-table-store-col-text": "Store",
+                      "secondary-button-background-color": "#768cdc",
+                      "secondary-button-text-color": "#768cdc",
+                      "secondary-button-type": "rectangular_outline",
+                      "secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "view-grid-points-column-color": "#7a97e8",
+                      "view-grid-rectangular-background-color": "#e6ecff",
+                      "view-grid-type": "rectangular"
+                    },
+                    staticContent: {
+                      "cssEditorEnabled": "true",
+                      "currency": "USD",
+                      "isMultiCurrencyEnabled": false,
+                      "isMultiStoreMerchant": false,
+                      "merchantId": "99393",
+                      "platformName": "shopify",
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy"
+                    },
+                    className: "MyRewardsWidget",
+                    dependencyGroupId: 2
+                },
+            
+                "128547": {
+                    instanceId: "128547",
+                    instanceVersionId: "318554911",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-coupons-redemption/app.v0.6.2-5198.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "confirmation-step-cancel-option": "NO",
+                      "confirmation-step-confirm-option": "YES",
+                      "confirmation-step-title": "ARE YOU SURE?",
+                      "coupon-background-type": "no-background",
+                      "coupon-code-copied-message-body": "Thank you for redeeming your points. Please paste the code at checkout.",
+                      "coupon-code-copied-message-color": "#707997",
+                      "coupon-code-copied-message-title": "COPIED",
+                      "coupons-redemption-description": "Redeeming your points is easy! Click Redeem My Points and copy \u0026 paste your code at checkout.",
+                      "coupons-redemption-headline": "How to use your points",
+                      "coupons-redemption-rule": "100 points equals $10.00",
+                      "description-color": "rgba(183,177,163,1)",
+                      "description-font-size": "20",
+                      "disabled-outline-button-color": "#929292",
+                      "discount-bigger-than-subscription-cost-text": "Your next subscription is lower than the redemption amount",
+                      "donate-button-text": "DONATE",
+                      "donation-success-message-body": "Thank you for donating ${{donation_amount}} to {{company_name}}",
+                      "donation-success-message-color": "#707997",
+                      "donation-success-message-title": "SUCCESS",
+                      "error-message-color": "#f04860",
+                      "error-message-title": "",
+                      "headline-color": "rgba(116,115,110,1)",
+                      "headline-font-size": 40,
+                      "login-button-color": "rgba(51,44,43,1)",
+                      "login-button-text": "REDEEM MY POINTS",
+                      "login-button-text-color": "rgba(255,255,255,1)",
+                      "login-button-type": "rounded_filled_rectangle",
+                      "message-font-size": "14",
+                      "missing-points-amount-text": "You don't have enough points to redeem",
+                      "next-subscription-headline-text": "NEXT ORDER",
+                      "next-subscription-subtitle-text": "{{product_name}} {{next_order_amount}}",
+                      "no-subscription-subtitle-text": "No ongoing subscriptions",
+                      "point-balance-text": "You have {{current_point_balance}} points",
+                      "points-balance-color": "rgba(116,115,110,1)",
+                      "points-balance-font-size": "20",
+                      "points-balance-number-color": "rgba(183,177,163,1)",
+                      "primary-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "redeem-button-color": "#556DD8",
+                      "redeem-button-text": "REDEEM",
+                      "redeem-button-text-color": "white",
+                      "redeem-button-type": "filled_rectangle",
+                      "redemption-645218-displayname": "$5.00 Off",
+                      "redemption-645218-settings-button-color": "rgba(183,177,163,1)",
+                      "redemption-645218-settings-button-text": "REDEEM",
+                      "redemption-645218-settings-button-text-color": "white",
+                      "redemption-645218-settings-button-type": "filled_rectangle",
+                      "redemption-645218-settings-call-to-action-button-text": "REDEEM",
+                      "redemption-645218-settings-cost": 500,
+                      "redemption-645218-settings-cost-color": "rgba(183,177,163,1)",
+                      "redemption-645218-settings-cost-font-size": "20",
+                      "redemption-645218-settings-cost-text": "{{points}} POINTS",
+                      "redemption-645218-settings-coupon-cost-font-size": "15",
+                      "redemption-645218-settings-coupon-reward-font-size": "29",
+                      "redemption-645218-settings-discount-amount-cents": 500,
+                      "redemption-645218-settings-discount-type": "fixed_amount",
+                      "redemption-645218-settings-reward": "$5.00 Off",
+                      "redemption-645218-settings-reward-color": "rgba(116,115,110,1)",
+                      "redemption-645218-settings-reward-font-size": "30",
+                      "redemption-645218-settings-success-message-text": "Discount Applied",
+                      "redemption-645219-displayname": "$10.00 Off",
+                      "redemption-645219-settings-button-color": "rgba(183,177,163,1)",
+                      "redemption-645219-settings-button-text": "REDEEM",
+                      "redemption-645219-settings-button-text-color": "white",
+                      "redemption-645219-settings-button-type": "filled_rectangle",
+                      "redemption-645219-settings-call-to-action-button-text": "REDEEM",
+                      "redemption-645219-settings-cost": 1000,
+                      "redemption-645219-settings-cost-color": "rgba(183,177,163,1)",
+                      "redemption-645219-settings-cost-font-size": "20",
+                      "redemption-645219-settings-cost-text": "{{points}} POINTS",
+                      "redemption-645219-settings-coupon-cost-font-size": "15",
+                      "redemption-645219-settings-coupon-reward-font-size": "29",
+                      "redemption-645219-settings-discount-amount-cents": 1000,
+                      "redemption-645219-settings-discount-type": "fixed_amount",
+                      "redemption-645219-settings-reward": "$10.00 Off",
+                      "redemption-645219-settings-reward-color": "rgba(116,115,110,1)",
+                      "redemption-645219-settings-reward-font-size": "30",
+                      "redemption-645219-settings-success-message-text": "Discount Applied",
+                      "redemption-645220-displayname": "$20.00 Off",
+                      "redemption-645220-settings-button-color": "rgba(183,177,163,1)",
+                      "redemption-645220-settings-button-text": "REDEEM",
+                      "redemption-645220-settings-button-text-color": "white",
+                      "redemption-645220-settings-button-type": "filled_rectangle",
+                      "redemption-645220-settings-call-to-action-button-text": "REDEEM",
+                      "redemption-645220-settings-cost": 2000,
+                      "redemption-645220-settings-cost-color": "rgba(183,177,163,1)",
+                      "redemption-645220-settings-cost-font-size": "20",
+                      "redemption-645220-settings-cost-text": "{{points}} POINTS",
+                      "redemption-645220-settings-coupon-cost-font-size": "15",
+                      "redemption-645220-settings-coupon-reward-font-size": "29",
+                      "redemption-645220-settings-discount-amount-cents": 2000,
+                      "redemption-645220-settings-discount-type": "fixed_amount",
+                      "redemption-645220-settings-reward": "$20.00 Off",
+                      "redemption-645220-settings-reward-color": "rgba(116,115,110,1)",
+                      "redemption-645220-settings-reward-font-size": "30",
+                      "redemption-645220-settings-success-message-text": "Discount Applied",
+                      "rule-border-color": "#bccdfe",
+                      "rule-color": "#061153",
+                      "rule-font-size": "18",
+                      "secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans\u0026display=swap",
+                      "selected-extensions": [
+                        "645218",
+                        "645219",
+                        "645220"
+                      ],
+                      "selected-redemptions-modes": "regular",
+                      "subscription-coupon-applied-message-body": "The discount was applied to your upcoming subscription order. You’ll be able to get another discount once the next order is processed.",
+                      "subscription-coupon-applied-message-color": "#707997",
+                      "subscription-coupon-applied-message-title": "",
+                      "subscription-divider-color": "#c2cdf4",
+                      "subscription-headline-color": "#666d8b",
+                      "subscription-headline-font-size": "14",
+                      "subscription-points-headline-text": "YOUR POINT BALANCE",
+                      "subscription-points-subtitle-text": "{{current_point_balance}} Points",
+                      "subscription-redemptions-description": "Choose a discount option that will automatically apply to your next subscription order.",
+                      "subscription-redemptions-headline": "Redeem for Subscription Discount",
+                      "subscription-subtitle-color": "#768cdc",
+                      "subscription-subtitle-font-size": "20",
+                      "view-layout": "redemptions-only"
+                    },
+                    staticContent: {
+                      "cssEditorEnabled": "true",
+                      "currency": "USD",
+                      "isMultiCurrencyEnabled": false,
+                      "merchantId": "99393",
+                      "platformName": "shopify",
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy",
+                      "storeLoginUrl": "/account/login",
+                      "subunitsPerUnit": 100
+                    },
+                    className: "CouponsRedemptionWidget",
+                    dependencyGroupId: 2
+                },
+            
+                "128546": {
+                    instanceId: "128546",
+                    instanceVersionId: "318554908",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-hero-section/app.v0.2.1-4807.js",
+                    cssOverrideAssetUrl: "https://cdn-widget-assets.yotpo.com/HeroSectionWidget/s7lE1cN3Ig5wi15G7f7Ozw/css-overrides/css-overrides.2024_01_04_12_50_38_509.css",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "background-image-url": "https://cdn-widget-assets.yotpo.com/static_assets/s7lE1cN3Ig5wi15G7f7Ozw/images/image_2022_03_09_22_26_57_480",
+                      "description-color": "rgba(255,255,255,1)",
+                      "description-font-size": "20",
+                      "description-text-logged-in": "As a member you'll earn points \u0026 exclusive rewards every time you shop.",
+                      "description-text-logged-out": "Become a member and earn points \u0026 exclusive rewards every time you shop.",
+                      "headline-color": "rgba(255,255,255,1)",
+                      "headline-font-size": 40,
+                      "headline-text-logged-in": "Welcome to the club",
+                      "headline-text-logged-out": "Join the club",
+                      "login-button-color": "rgba(255,255,255,1)",
+                      "login-button-text": "LOGIN",
+                      "login-button-text-color": "rgba(255,255,255,1)",
+                      "login-button-type": "rounded_rectangle",
+                      "mobile-background-image-url": "https://cdn-widget-assets.yotpo.com/static_assets/s7lE1cN3Ig5wi15G7f7Ozw/images/image_2022_03_09_22_26_15_707",
+                      "primary-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "register-button-color": "rgba(255,255,255,1)",
+                      "register-button-text": "JOIN NOW",
+                      "register-button-text-color": "rgba(255,255,255,1)",
+                      "register-button-type": "rounded_rectangle",
+                      "secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "view-layout": "center-layout"
+                    },
+                    staticContent: {
+                      "cssEditorEnabled": "true",
+                      "merchantId": "99393",
+                      "platformName": "shopify",
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy",
+                      "storeLoginUrl": "//forom.co/account/login",
+                      "storeRegistrationUrl": "//forom.co/account/register"
+                    },
+                    className: "HeroSectionWidget",
+                    dependencyGroupId: 2
+                },
+            
+                "128545": {
+                    instanceId: "128545",
+                    instanceVersionId: "318555330",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-loyalty-page/app.v0.6.2-6950.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "headline-color": "rgba(116,115,110,1)",
+                      "headline-font-size": 40,
+                      "page-background-color": "",
+                      "primary-font-name-and-url": "Montserrat@600|https://fonts.googleapis.com/css?family=Montserrat:600\u0026display=swap",
+                      "secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "selected-widgets-ids": [
+                        "128546",
+                        "128548",
+                        "128549",
+                        "128547",
+                        "128551"
+                      ],
+                      "widget-128546-type": "HeroSectionWidget",
+                      "widget-128547-type": "CouponsRedemptionWidget",
+                      "widget-128548-type": "MyRewardsWidget",
+                      "widget-128549-type": "CampaignWidget",
+                      "widget-128551-type": "ReferralWidget"
+                    },
+                    staticContent: {
+                      "platformName": "shopify",
+                      "storeId": "IYl4tgnAaKHlTTnIPehSmrG3DOWu3juTwK8IyvOy"
+                    },
+                    className: "LoyaltyPageWidget",
+                    dependencyGroupId: null
+                },
+            
+                "128542": {
+                    instanceId: "128542",
+                    instanceVersionId: "310882072",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-referred-friend/app.v0.7.2-6964.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "background-color": "rgba(0, 0, 0, 0.7)",
+                      "background-image-url": "https://cdn-widget-assets.yotpo.com/widget-referred-friend/customizations/defaults/backgroundImage-desktop.jpg",
+                      "background-image-url-mobile": "https://cdn-widget-assets.yotpo.com/widget-referred-friend/customizations/defaults/backgroundImage-mobile-v2.jpg",
+                      "copy-code-copied-text": "COPIED",
+                      "copy-code-icon-color": "#e9e8e0",
+                      "coupon-background-color": "#fafbfc",
+                      "description-color": "#3e3a36",
+                      "description-font-size": "18px",
+                      "description-text": "Use this code at checkout:",
+                      "email-activation": "false",
+                      "email-capture-description-color": "#3e3a36",
+                      "email-capture-description-font-size": "18px",
+                      "email-capture-description-text": "Enter your email to get the referral code:",
+                      "email-capture-title-color": "#47423e",
+                      "email-capture-title-font-size": "26px",
+                      "email-capture-title-text": "HEY, FRIEND! YOU'VE GOT A DISCOUNT ON YOUR FIRST PURCHASE.",
+                      "error-already-used-coupon-text": "Looks like you’ve already used this offer",
+                      "error-general-failure-text": "Oops! Looks like something went wrong generating your coupon code. Please refresh page to try again.",
+                      "error-link-color": "#0042E4",
+                      "error-message-invalid-email": "Please fill in a valid email address",
+                      "error-message-invalid-email-text-color": "#f04860",
+                      "error-message-text-color": "#f04860",
+                      "error-not-eligible-coupon-text": "Looks like you’re not eligible to use this offer.",
+                      "error-safari-hide-ip-text": "To get the discount code you’ll need to turn off the \"Hide IP address\" option in your Safari privacy settings, then click the referral link again.",
+                      "next-button-background-color": "#393086",
+                      "next-button-text": "Next",
+                      "next-button-text-color": "#ffffff",
+                      "next-button-type": "filled_rectangle",
+                      "popup-background-color": "#ffffff",
+                      "primary-font-name-and-url": "Source Sans Pro",
+                      "secondary-font-name-and-url": "Nunito Sans@400| https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "start-button-background-color": "#74736d",
+                      "start-button-text": "Start Shopping",
+                      "start-button-text-color": "#ffffff",
+                      "start-button-type": "filled_rectangle",
+                      "text-design-choose-screen": "email_capture_display",
+                      "title-color": "#47423e",
+                      "title-font-size": "26px",
+                      "title-text": "HEY, FRIEND! YOU'VE GOT A DISCOUNT ON YOUR FIRST PURCHASE."
+                    },
+                    staticContent: {
+                      "cssEditorEnabled": "true",
+                      "currency": "USD",
+                      "forceEmailCapture": "false",
+                      "isMultiCurrencyEnabled": false,
+                      "merchantId": "99393",
+                      "platformName": "shopify",
+                      "selfExecutable": true,
+                      "shouldShowInfoMessage": false,
+                      "urlMatch": "https?://(?!yap.yotpo.com).*sref_id=.*"
+                    },
+                    className: "ReferredFriendWidget",
+                    dependencyGroupId: null
+                },
+            
+            },
+            guidStaticContent: {},
+            dependencyGroups: {
+                      "2": [
+                        "https://cdn-widget-assets.yotpo.com/widget-vue-core/app.v0.1.0-2295.js"
+                      ]
+                    }
+        },
+        initializer: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widgets-initializer/app.v0.9.4-7036.js",
+        analytics: "https://cdn-widgetsrepository.yotpo.com/widget-assets/yotpo-pixel/2024-04-18_14-53-12/bundle.js"
+    }
+    
+    
+    const initWidgets = function (config, initializeWidgets = true) {
+        const widgetInitializer = yotpoWidgetsContainer['yotpo_widget_initializer'](config);
+        return widgetInitializer.initWidgets(initializeWidgets);
+    };
+    const initWidget = function (config, instanceId, widgetPlaceHolder) {
+        const widgetInitializer = yotpoWidgetsContainer['yotpo_widget_initializer'](config);
+        if (widgetInitializer.initWidget) {
+            return widgetInitializer.initWidget(instanceId, widgetPlaceHolder);
+        }
+        console.error("initWidget is not supported widgetInitializer");
+    };
+    const onInitializerLoad = function (config) {
+        const prevInitWidgets = yotpoWidgetsContainer.initWidgets;
+        yotpoWidgetsContainer.initWidgets = function (initializeWidgets = true) {
+            if (prevInitWidgets) {
+                if (typeof Promise !== 'undefined' && Promise.all) {
+                    return Promise.all([prevInitWidgets(initializeWidgets), initWidgets(config, initializeWidgets)]);
+                }
+                console.warn('[deprecated] promise is not supported in initWidgets');
+                prevInitWidgets(initializeWidgets);
+            }
+            return initWidgets(config, initializeWidgets);
+        }
+        const prevInitWidget = yotpoWidgetsContainer.initWidget;
+        yotpoWidgetsContainer.initWidget = function (instanceId, widgetPlaceHolder) {
+            if (prevInitWidget) {
+              prevInitWidget(instanceId, widgetPlaceHolder)
+            }
+            return initWidget(config, instanceId, widgetPlaceHolder);
+        }
+        const guidWidgetContainer = getGuidWidgetsContainer();
+        guidWidgetContainer.initWidgets = function () {
+            return initWidgets(config);
+        }
+        guidWidgetContainer.initWidgets();
+    };
+    function getGuidWidgetsContainer () {
+        if (!yotpoWidgetsContainer.guids) {
+            yotpoWidgetsContainer.guids = {};
+        }
+        if (!yotpoWidgetsContainer.guids[guid]) {
+            yotpoWidgetsContainer.guids[guid] = {};
+        }
+        return yotpoWidgetsContainer.guids[guid];
+    }
+
+    const guidWidgetContainer = getGuidWidgetsContainer();
+    guidWidgetContainer.config = loader.config;
+    if (!guidWidgetContainer.yotpo_widget_scripts_loaded) {
+        guidWidgetContainer.yotpo_widget_scripts_loaded = true;
+        guidWidgetContainer.onInitializerLoad = function () { onInitializerLoad(loader.config) };
+        
+        loader.loadDep(loader.analytics, function () {}, 'defer');
+        
+        
+        loader.loadDep(loader.initializer, function () { guidWidgetContainer.onInitializerLoad() }, 'async');
+        
+    }
+})()
+
+
